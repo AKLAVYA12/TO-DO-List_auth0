@@ -1,7 +1,7 @@
 
 import { auth0Client , configureClient} from './auth.js';
 
-sessionStorage.clear();
+//sessionStorage.clear();
 
 const updateUI = async () => {
   const isAuthenticated = await auth0Client.isAuthenticated();
