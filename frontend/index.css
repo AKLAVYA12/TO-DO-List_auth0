@@ -18,7 +18,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000 0%, #2d3436 100%);
   font-family: 'Segoe UI', 'Roboto', sans-serif;
   color: var(--light-color);
   display: flex;
@@ -130,7 +130,7 @@ body {
   margin: 1.5rem 0;
   padding: 1rem;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-out;
 }
 

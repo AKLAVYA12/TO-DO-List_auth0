@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do-Advance</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="./frontend/dashboard.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.130.0/build/three.min.js"></script> <!--try kar ke dekh vanta.js website achi hai bhai animation lgaoo mooj karoo ^^ -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      VANTA.TRUNK({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+      });
+    });
+  </script>
 </head>
 <body>
-    <div id="contain-das">
-        <p id="display"></p>
-        <button id="logout">logout</button>
-    </div>
+
+  <div id="vanta-bg"></div>
+  <div class="app-container">
+
+    <header class="header">
+      <h1>Advanced To-Do List</h1>
+      <p id="display"></p> 
+      <button id="toggleDarkMode" title="Toggle Dark Mode">🌙</button>
+    </header>
+
+    <main class="main-content">
+      <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter your new task..." />
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+      
+      <ul class="todo-list" id="todoList" style="display: none;">
+        <!-- bitchhh ig we will add some dynamic task here leave it ;)-->
+      </ul>
+    </main>
+
+    <footer class="footer">
+      <button id="clearTasks">Clear Completed</button>
+      <button id="logout">Logout</button>
+    </footer>
+  </div>
+
+  <script type="module" src="/backend/dashboard.js"></script>
 </body>
-<script type="module" src="/backend/dashboard.js"></script>
 </html>
